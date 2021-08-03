@@ -2,15 +2,70 @@
 <html lang="en">
 	<head>
 		<title>Google Search</title>
+		<style>
+			.link {
+				text-align: right;
+				height:20px;
+				padding: 10px;
+				margin: 10px 10px -40px 10px;
+				font-family:sans-serif;
+				font-size: 15px;
+			}
+
+			.buttons {
+				padding: 5px 10px 5px 10px;
+				margin: 10px 2px 0px 2px;
+				border: 1px solid transparent;
+				background-color:rgb(245, 245, 245)
+			}
+			.buttons:hover {
+				cursor:pointer;
+				border: 1px solid gray;
+			}
+			.search {
+				display:flex;
+				height: 100vh;
+				justify-content:center;
+				align-items:center;
+				flex-direction: column;
+
+			}
+			.searchbar {
+				border-radius: 25px;
+				width: 35vw;
+				height: 25px;
+
+			}
+			a {
+				color:black;
+				text-decoration: none;
+				margin: 10px;
+			}
+			a:hover {
+				cursor:pointer;
+				text-decoration:underline;
+			}
+			input {
+				outline:none;
+				padding: 0px 20px 0px 20px;
+			}
+		</style>
 	</head>
 	<body>
-		<div>
-			<a href="GoogleImage.html"> Image Search</a>
-			<a href="GoogleAdvanced.html">Advanced Search</div>a>
+		<div class="link">
+			<a href="GoogleImage.html"> Images</a>
+			<a href="GoogleAdvanced.html">Advanced</a>
 		</div>
-		<form action="https://google.com/search">
-            <input type="text" name="q">
-            <input type="submit" value="Google Search">
-        </form>
+
+		<form action="https://google.com/search" class="search">
+			<div>
+				<input type="text" name="q" class="searchbar">
+			</div>
+
+			<div>
+				<input type="submit" value="Google Search" class="buttons">
+				<input type="submit" value="I'm Feeling Lucky" class="buttons">
+			</div>
+		</form>
 	</body>
 </html>
