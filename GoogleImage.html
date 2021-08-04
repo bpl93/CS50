@@ -2,15 +2,55 @@
 <html lang="en">
 	<head>
 		<title>Google Image Search</title>
+		<style>
+			.buttons {
+				padding: 5px 10px 5px 10px;
+				margin: 10px 2px 0px 2px;
+				border: 1px solid transparent;
+				background-color:rgb(245, 245, 245)
+			}
+			.buttons:hover {
+				cursor:pointer;
+				border: 1px solid gray;
+			}
+			.search {
+				display:flex;
+				height: 100vh;
+				justify-content:center;
+				align-items:center;
+				flex-direction: column;
+
+			}
+			.searchbar {
+				border: 1px solid rgb(200, 200, 200);
+				border-radius: 25px;
+				width: 35vw;
+				height: 40px;
+
+			}
+			input {
+				outline:none;
+				padding: 0px 20px 0px 20px;
+			}
+		</style>
 	</head>
 	<body>
-		<div>
-			<a href="GoogleSearch.html"> Go Back to Google Search</a>
+		<div class=backlogo>
+			<a href="GoogleSearch.html"> <img src="google.jpg" alt="Google" Height=25vh></a>
 		</div>
-		<form action="https://images.google.com/search">
-            <input type="text" name="q" >
-            <input type="hidden" name="tbm" value="isch">
-            <input type="submit" value="Google Image Search">
-        </form>
+
+		<form action="https://google.com/search" class="search">
+			<div style="padding: 0px 0px 20px 0px;">
+				<img src="googleimage.jpg" alt="Google" Height=225vh>
+			</div>
+			<div>
+				<input type="text" name="q" class="searchbar">
+				<input type="hidden" name="tbm" value="isch">
+			</div>
+
+			<div>
+				<input type="submit" value="Image Search" class=buttons>
+			</div>
+		</form>
 	</body>
 </html>

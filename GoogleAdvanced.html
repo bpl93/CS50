@@ -2,17 +2,92 @@
 <html lang="en">
 	<head>
 		<title>Google Advanced Search</title>
+		<style>
+			div {
+				font-family: sans-serif;
+			}
+			.backlogo {
+				margin: 20px;
+			}
+			.red {
+				font-size: 20px;
+				color: rgb(225, 0, 0);
+				padding: 30px;
+				border-bottom: 1px solid rgb(200, 200, 200);
+			}
+			table {
+				margin: 30px;
+			}
+			th {
+				font-size: 15px;
+				font-weight:normal;
+				text-align: left;
+				padding: 10px;
+			}
+			td {
+				font-size: 12px;
+				padding: 10px;
+			}
+			.text {
+				Width: 30vw;
+				padding: 6px;
+				border: 1px solid rgb(200, 200, 200)
+			
+			}
+			.button{
+				background-color:rgb(65, 133, 244);
+				color: white;
+				padding: 6px;
+				border: 1px solid rgb(34, 101, 209);
+				border-radius: 2px;
+				
+			}
+
+		</style>
 	</head>
 	<body>
-        <div>
-			<a href="GoogleSearch.html"> Go Back to Google Search</a>
+        <div class=backlogo>
+			<a href="GoogleSearch.html"> <img src="google.jpg" alt="Google" Height=25vh></a>
 		</div>
-		<form action="https://www.google.com/search">
-            <input type="text" name="as_q" placeholder="...all these words.">
-            <input type="text" name="as_epq" placeholder="...this exact word or phrase.">
-            <input type="text" name="as_oq" placeholder="...any of these words.">
-            <input type="text" name="as_eq" placeholder="...none of these words">
-            <input type="submit" value="Google Advanced Search">
-        </form>>
+		<div class=red>
+			Advanced Search
+		</div>
+		<div>
+			<form action="https://www.google.com/search">
+				<table>
+					<thead>
+						<tr>
+							<th>
+								Find pages with...
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>All these words:</td>
+							<td><input type="text" name="as_q" class="text"></td>
+						</tr>
+						<tr>
+							<td>This exact word or phrase:</td>
+							<td><input type="text" name="as_epq" class="text"></td>
+						</tr>
+						<tr>
+							<td>Any of these words:</td>
+							<td><input type="text" name="as_oq" class="text"></td>
+						</tr>
+						<tr>
+							<td>None of these words:</td>
+							<td><input type="text" name="as_eq" class="text"></td>
+						</tr>
+						<tr>
+							<td></td>
+							<td style="text-align: right;">
+								<input type="submit" value="Advanced Search" class="button">
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</form>
+		</div>
 	</body>
 </html>
